@@ -1,29 +1,30 @@
 const menuBtn = document.getElementById("menuBtn");
 const mobileNav = document.getElementById("mobileNav");
 
+if (menuBtn && mobileNav) {
 
-/* ================= MOBILE MENU ================= */
+    menuBtn.addEventListener("click", () => {
 
-menuBtn.addEventListener("click", () => {
-
-    mobileNav.classList.toggle("show");
-
-});
-
-
-const mobileLinks =
-    mobileNav.querySelectorAll("a");
-
-
-mobileLinks.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        mobileNav.classList.remove("show");
+        mobileNav.classList.toggle("show");
 
     });
 
-});
+
+    const mobileLinks =
+        mobileNav.querySelectorAll("a");
+
+
+    mobileLinks.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mobileNav.classList.remove("show");
+
+        });
+
+    });
+
+}
 
 
 /* ================= PROFILE IMAGE PREVIEW ================= */
@@ -35,31 +36,44 @@ const imagePreview =
     document.getElementById("imagePreview");
 
 
-profilePicture.addEventListener("change", () => {
+if (profilePicture && imagePreview) {
 
-    const file = profilePicture.files[0];
+    profilePicture.addEventListener("change", () => {
 
-    if (!file) {
-        imagePreview.innerHTML = "";
-        return;
-    }
+        const file =
+            profilePicture.files[0];
 
-    const reader = new FileReader();
 
-    reader.onload = function(event) {
+        if (!file) {
 
-        imagePreview.innerHTML = `
-            <img
-                src="${event.target.result}"
-                alt="Profile preview"
-            >
-        `;
+            imagePreview.innerHTML = "";
 
-    };
+            return;
 
-    reader.readAsDataURL(file);
+        }
 
-});
+
+        const reader =
+            new FileReader();
+
+
+        reader.onload = function(event) {
+
+            imagePreview.innerHTML = `
+                <img
+                    src="${event.target.result}"
+                    alt="Profile preview"
+                >
+            `;
+
+        };
+
+
+        reader.readAsDataURL(file);
+
+    });
+
+}
 
 
 /* ================= FORM ================= */
@@ -71,48 +85,37 @@ const formMessage =
     document.getElementById("formMessage");
 
 
-joinForm.addEventListener("submit", event => {
+if (joinForm && formMessage) {
 
-    event.preventDefault();
+    joinForm.addEventListener("submit", event => {
 
-
-    const password =
-        document.getElementById("password").value;
-
-    const confirmPassword =
-        document.getElementById("confirmPassword").value;
+        event.preventDefault();
 
 
-    /* PASSWORD CHECK */
+        const password =
+            document.getElementById("password").value;
 
-    if (password !== confirmPassword) {
+        const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+
+        /* PASSWORD CHECK */
+
+        if (password !== confirmPassword) {
+
+            formMessage.textContent =
+                "Passwords do not match.";
+
+            return;
+
+        }
+
+
+        /* FRONTEND DEMO */
 
         formMessage.textContent =
-            "Passwords do not match.";
+            "Application ready. Backend connection will be added next.";
 
-        return;
-    }
+    });
 
-
-    /* FRONTEND DEMO */
-
-    formMessage.textContent =
-        "Application ready. Backend connection will be added next.";
-
-});
-
-
-/* ================= FEEDBACK ================= */
-
-const feedbackBtn =
-    document.getElementById("feedbackBtn");
-
-
-feedbackBtn.addEventListener("click", event => {
-
-    event.preventDefault();
-
-    alert("Feedback system coming soon.");
-
-});
-```
+}
