@@ -1,0 +1,722 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    height: 80px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #050505;
+    border-bottom: 1px solid #222;
+
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: #888;
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: #ffffff;
+}
+
+.nav a.active {
+    font-weight: 700;
+}
+
+
+/* ================= MENU ================= */
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+
+/* ================= HERO ================= */
+
+.clients-hero {
+    min-height: 570px;
+
+    padding: 110px 7%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.clients-hero > p:first-child {
+    color: #777;
+
+    font-size: 12px;
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.clients-hero h1 {
+    max-width: 950px;
+
+    font-size: clamp(50px, 7vw, 95px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+.clients-hero h1 span {
+    color: #777;
+}
+
+.hero-description {
+    color: #999;
+
+    max-width: 600px;
+
+    font-size: 17px;
+
+    margin-top: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 14px 25px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.primary-btn {
+    background: #ffffff;
+
+    color: #000000;
+}
+
+.secondary-btn {
+    border: 1px solid #555;
+
+    color: #ffffff;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.why-section,
+.how-section,
+.request-section,
+.payment-section {
+    padding: 110px 7%;
+
+    border-top: 1px solid #222;
+}
+
+.section-label {
+    color: #666;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 60px;
+}
+
+.section-label span {
+    color: #ffffff;
+
+    margin-right: 15px;
+}
+
+
+/* ================= WHY ================= */
+
+.why-content {
+    max-width: 850px;
+
+    margin-left: auto;
+}
+
+.why-content h2,
+.request-content h2,
+.payment-content h2,
+.privacy-section h2 {
+    font-size: clamp(35px, 5vw, 65px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 40px;
+}
+
+.why-content h2 span,
+.request-content h2 span,
+.payment-content h2 span,
+.privacy-section h2 span {
+    color: #777;
+}
+
+.why-content p,
+.request-content > p,
+.payment-content > p {
+    max-width: 700px;
+
+    color: #999;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= HOW IT WORKS ================= */
+
+.steps {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.step {
+    border: 1px solid #252525;
+
+    padding: 30px;
+
+    min-height: 250px;
+}
+
+.step > span {
+    color: #666;
+
+    font-size: 13px;
+}
+
+.step h3 {
+    font-size: 22px;
+
+    margin: 45px 0 15px;
+}
+
+.step p {
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+/* ================= REQUEST ================= */
+
+.request-content {
+    max-width: 850px;
+
+    margin-left: auto;
+}
+
+.small-label {
+    color: #666;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+.request-list {
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+.request-list div {
+    border: 1px solid #252525;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.request-list strong {
+    font-size: 15px;
+}
+
+.request-list span {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* ================= PAYMENT ================= */
+
+.payment-content {
+    max-width: 850px;
+
+    margin-left: auto;
+}
+
+.payment-box {
+    margin: 50px 0;
+
+    border: 1px solid #252525;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+
+    padding: 35px;
+}
+
+.payment-box div:not(.divider) {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.payment-box strong {
+    font-size: 55px;
+}
+
+.payment-box span {
+    color: #777;
+
+    font-size: 13px;
+}
+
+.divider {
+    color: #555;
+
+    font-size: 30px;
+
+    padding: 0 30px;
+}
+
+.payment-note {
+    color: #666;
+
+    font-size: 13px;
+
+    max-width: 700px;
+}
+
+
+/* ================= PRIVACY ================= */
+
+.privacy-section {
+    padding: 80px 7%;
+
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.privacy-section p {
+    color: #888;
+
+    font-size: 15px;
+}
+
+
+/* ================= CTA ================= */
+
+.clients-cta {
+    margin: 100px 7%;
+
+    padding: 70px;
+
+    border: 1px solid #252525;
+
+    text-align: center;
+}
+
+.clients-cta > p {
+    color: #666;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+}
+
+.clients-cta h2 {
+    font-size: clamp(35px, 5vw, 65px);
+
+    line-height: 1;
+
+    margin: 20px 0 35px;
+}
+
+.clients-cta h2 span {
+    color: #777;
+}
+
+.clients-cta a {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background: #ffffff;
+
+    color: #000000;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #030303;
+
+    border-top: 1px solid #222;
+
+    padding: 70px 7% 25px;
+}
+
+.footer-container {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+
+    gap: 40px;
+}
+
+.footer-brand h2 {
+    letter-spacing: 4px;
+}
+
+.footer-brand p {
+    color: #777;
+
+    max-width: 250px;
+
+    margin-top: 15px;
+}
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-column h3 {
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #777;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #1d1d1d;
+
+    margin-top: 60px;
+
+    padding-top: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #555;
+
+    font-size: 12px;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        height: 70px;
+
+        padding: 0 5%;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .mobile-nav {
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #050505;
+
+        border-bottom: 1px solid #222;
+
+        display: none;
+
+        flex-direction: column;
+
+        z-index: 999;
+    }
+
+    .mobile-nav.show {
+        display: flex;
+    }
+
+    .mobile-nav a {
+        padding: 17px 5%;
+
+        color: #888;
+
+        text-decoration: none;
+
+        border-bottom: 1px solid #1c1c1c;
+    }
+
+    .mobile-nav a.active {
+        color: #ffffff;
+    }
+
+    .clients-hero {
+        padding: 90px 5%;
+    }
+
+    .why-section,
+    .how-section,
+    .request-section,
+    .payment-section {
+        padding: 80px 5%;
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .privacy-section {
+        padding: 70px 5%;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .clients-cta {
+        margin: 70px 5%;
+
+        padding: 50px 30px;
+    }
+
+    .footer {
+        padding: 60px 5% 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 425px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .clients-hero h1 {
+        font-size: 45px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        text-align: center;
+    }
+
+    .why-section,
+    .how-section,
+    .request-section,
+    .payment-section {
+        padding: 70px 5%;
+    }
+
+    .why-content h2,
+    .request-content h2,
+    .payment-content h2,
+    .privacy-section h2 {
+        font-size: 38px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .request-list {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-box {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        text-align: center;
+    }
+
+    .divider {
+        padding: 0;
+    }
+
+    .privacy-section {
+        padding: 60px 5%;
+    }
+
+    .clients-cta {
+        padding: 40px 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 375px) {
+
+    .clients-hero h1 {
+        font-size: 40px;
+    }
+
+    .why-content h2,
+    .request-content h2,
+    .payment-content h2,
+    .privacy-section h2 {
+        font-size: 34px;
+    }
+
+}

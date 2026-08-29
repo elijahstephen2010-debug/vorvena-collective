@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profiles | VORVENA</title>
+
+    <link rel="stylesheet" href="profiles.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <a href="home.html" class="logo">VORVENA</a>
+
+        <nav class="nav">
+
+            <a href="home.html">Home</a>
+
+            <a href="community.html">Community</a>
+
+            <a href="profiles.html" class="active">
+                Profiles
+            </a>
+
+            <a href="clients.html">Clients</a>
+
+            <a href="join.html">Join Community</a>
+
+            <a href="login.html">Login</a>
+
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+
+        <a href="home.html">Home</a>
+
+        <a href="community.html">
+            Community
+        </a>
+
+        <a href="profiles.html" class="active">
+            Profiles
+        </a>
+
+        <a href="clients.html">
+            Clients
+        </a>
+
+        <a href="join.html">
+            Join Community
+        </a>
+
+        <a href="login.html">
+            Login
+        </a>
+
+    </div>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- PAGE INTRO -->
+        <section class="profiles-hero">
+
+            <p>VORVENA PROFESSIONALS</p>
+
+            <h1>
+                FIND THE RIGHT
+                <span>SKILLS.</span>
+            </h1>
+
+            <p class="hero-text">
+                Explore approved professionals in the VORVENA
+                community and discover the right talent for
+                your next project.
+            </p>
+
+        </section>
+
+
+        <!-- SEARCH & FILTER -->
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by name or profession..."
+                >
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+
+            <div class="filter-box">
+
+                <select id="categoryFilter">
+
+                    <option value="all">
+                        All Skills
+                    </option>
+
+                    <option value="developer">
+                        Developer
+                    </option>
+
+                    <option value="designer">
+                        Graphic Designer
+                    </option>
+
+                    <option value="motion">
+                        Motion Designer
+                    </option>
+
+                    <option value="photographer">
+                        Photographer
+                    </option>
+
+                    <option value="writer">
+                        Writer
+                    </option>
+
+                    <option value="marketer">
+                        Marketer
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROFILES -->
+        <section class="profiles-section">
+
+            <div class="section-heading">
+
+                <p>APPROVED MEMBERS</p>
+
+                <h2>
+                    PROFESSIONAL
+                    <span>PROFILES.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="profiles-grid" id="profilesGrid">
+
+
+                <!-- PROFILE 1 -->
+
+                <article
+                    class="profile-card"
+                    data-category="developer"
+                    data-name="Elijah Stephen"
+                >
+
+                    <div class="profile-image">
+                        <div class="image-placeholder">
+                            ES
+                        </div>
+
+                        <span class="verified">
+                            ✓ VERIFIED
+                        </span>
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <h3>
+                            Elijah Stephen
+                        </h3>
+
+                        <p class="profession">
+                            Frontend Developer
+                        </p>
+
+                        <p class="location">
+                            📍 Nigeria
+                        </p>
+
+                        <div class="skills">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+
+                        </div>
+
+                        <div class="rating">
+                            ★ 4.9
+                        </div>
+
+                        <a
+                            href="#"
+                            class="profile-btn"
+                            data-profile="Elijah Stephen"
+                        >
+                            View Profile →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROFILE 2 -->
+
+                <article
+                    class="profile-card"
+                    data-category="designer"
+                    data-name="Amara James"
+                >
+
+                    <div class="profile-image">
+
+                        <div class="image-placeholder">
+                            AJ
+                        </div>
+
+                        <span class="verified">
+                            ✓ VERIFIED
+                        </span>
+
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <h3>
+                            Amara James
+                        </h3>
+
+                        <p class="profession">
+                            Graphic Designer
+                        </p>
+
+                        <p class="location">
+                            📍 Nigeria
+                        </p>
+
+                        <div class="skills">
+
+                            <span>Branding</span>
+                            <span>Flyers</span>
+                            <span>UI Design</span>
+
+                        </div>
+
+                        <div class="rating">
+                            ★ 4.8
+                        </div>
+
+                        <a
+                            href="#"
+                            class="profile-btn"
+                            data-profile="Amara James"
+                        >
+                            View Profile →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROFILE 3 -->
+
+                <article
+                    class="profile-card"
+                    data-category="motion"
+                    data-name="Daniel Cole"
+                >
+
+                    <div class="profile-image">
+
+                        <div class="image-placeholder">
+                            DC
+                        </div>
+
+                        <span class="verified">
+                            ✓ VERIFIED
+                        </span>
+
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <h3>
+                            Daniel Cole
+                        </h3>
+
+                        <p class="profession">
+                            Motion Designer
+                        </p>
+
+                        <p class="location">
+                            📍 Nigeria
+                        </p>
+
+                        <div class="skills">
+
+                            <span>Animation</span>
+                            <span>Motion</span>
+                            <span>Video</span>
+
+                        </div>
+
+                        <div class="rating">
+                            ★ 5.0
+                        </div>
+
+                        <a
+                            href="#"
+                            class="profile-btn"
+                            data-profile="Daniel Cole"
+                        >
+                            View Profile →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+
+            <div
+                class="no-results"
+                id="noResults"
+            >
+
+                <h3>
+                    No profiles found.
+                </h3>
+
+                <p>
+                    Try another name, profession or category.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRIVACY NOTICE -->
+
+        <section class="privacy-notice">
+
+            <div>
+
+                <p class="notice-label">
+                    PRIVACY
+                </p>
+
+                <h2>
+                    PROFESSIONAL INFORMATION.
+                    <span>NOT PRIVATE DATA.</span>
+                </h2>
+
+            </div>
+
+            <p>
+                Public profiles only display information
+                approved for professional viewing. Private
+                information such as email addresses, phone
+                numbers, passwords, CV files and administrator
+                notes are not displayed here.
+            </p>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section class="profiles-cta">
+
+            <p>
+                ARE YOU A SKILLED PROFESSIONAL?
+            </p>
+
+            <h2>
+                GET YOUR
+                <span>PROFILE</span>
+                ON VORVENA.
+            </h2>
+
+            <a href="join.html">
+                Join Community
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <h2>VORVENA</h2>
+
+                <p>
+                    Connecting skilled people with
+                    real opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Explore</h3>
+
+                <a href="home.html">
+                    Home
+                </a>
+
+                <a href="community.html">
+                    Community
+                </a>
+
+                <a href="profiles.html">
+                    Profiles
+                </a>
+
+                <a href="clients.html">
+                    Clients
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Join</h3>
+
+                <a href="join.html">
+                    Join Community
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Legal</h3>
+
+                <a href="terms.html">
+                    Terms & Conditions
+                </a>
+
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="guidelines.html">
+                    Community Guidelines
+                </a>
+
+                <a href="#" id="feedbackBtn">
+                    💬 Give Feedback
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 VORVENA. All rights reserved.
+            </p>
+
+            <p>
+                Built for talent. Built for opportunity.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="profiles.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,608 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    height: 80px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #222;
+
+    background: #050505;
+
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: #888;
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: #ffffff;
+}
+
+.nav a.active {
+    font-weight: 700;
+}
+
+
+/* ================= MOBILE MENU ================= */
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+
+/* ================= PAGE HERO ================= */
+
+.page-hero {
+    min-height: 560px;
+
+    padding: 120px 7%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-hero > p:first-child {
+    color: #777;
+
+    font-size: 12px;
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.page-hero h1 {
+    max-width: 900px;
+
+    font-size: clamp(50px, 7vw, 95px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+.page-hero h1 span {
+    color: #777;
+}
+
+.hero-text {
+    max-width: 600px;
+
+    color: #999;
+
+    font-size: 17px;
+
+    margin-top: 35px;
+}
+
+
+/* ================= GENERAL SECTIONS ================= */
+
+.about-community,
+.feature-section,
+.client-section,
+.verification-section {
+    padding: 110px 7%;
+
+    border-top: 1px solid #1d1d1d;
+}
+
+.section-label {
+    color: #666;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 60px;
+}
+
+.section-label span {
+    color: #ffffff;
+
+    margin-right: 15px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-content {
+    max-width: 850px;
+
+    margin-left: auto;
+}
+
+.about-content h2,
+.client-content h2,
+.verification-content h2 {
+    font-size: clamp(35px, 5vw, 65px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 40px;
+}
+
+.about-content h2 span,
+.client-content h2 span,
+.verification-content h2 span {
+    color: #777;
+}
+
+.about-content p,
+.client-content p,
+.verification-content p {
+    color: #999;
+
+    font-size: 16px;
+
+    max-width: 700px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= FEATURES ================= */
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.feature {
+    border: 1px solid #252525;
+
+    padding: 35px;
+
+    min-height: 270px;
+}
+
+.number {
+    color: #666;
+
+    font-size: 13px;
+
+    margin-bottom: 50px;
+}
+
+.feature h3 {
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+.feature p {
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+/* ================= CLIENT SECTION ================= */
+
+.client-content {
+    max-width: 850px;
+
+    margin-left: auto;
+}
+
+.outline-btn {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 14px 24px;
+
+    border: 1px solid #555;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.outline-btn:hover {
+    border-color: #ffffff;
+}
+
+
+/* ================= VERIFICATION ================= */
+
+.verification-content {
+    max-width: 850px;
+
+    margin-left: auto;
+}
+
+.verification-flow {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin-top: 50px;
+}
+
+.verification-flow div {
+    border: 1px solid #252525;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.verification-flow strong {
+    color: #ffffff;
+}
+
+.verification-flow span {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* ================= CTA ================= */
+
+.community-cta {
+    margin: 100px 7%;
+
+    padding: 70px;
+
+    border: 1px solid #252525;
+
+    text-align: center;
+}
+
+.community-cta p {
+    color: #666;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+}
+
+.community-cta h2 {
+    font-size: clamp(35px, 5vw, 65px);
+
+    line-height: 1;
+
+    margin: 20px 0 35px;
+}
+
+.community-cta h2 span {
+    color: #777;
+}
+
+.primary-btn {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background: #ffffff;
+
+    color: #000000;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: #ccc;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    border-top: 1px solid #222;
+
+    background: #030303;
+
+    padding: 70px 7% 25px;
+}
+
+.footer-container {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+
+    gap: 40px;
+}
+
+.footer-brand h2 {
+    letter-spacing: 4px;
+}
+
+.footer-brand p {
+    color: #777;
+
+    max-width: 250px;
+
+    margin-top: 15px;
+}
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-column h3 {
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #777;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #1d1d1d;
+
+    margin-top: 60px;
+
+    padding-top: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    color: #555;
+
+    font-size: 12px;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        height: 70px;
+
+        padding: 0 5%;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .mobile-nav {
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #050505;
+
+        border-bottom: 1px solid #222;
+
+        display: none;
+
+        flex-direction: column;
+
+        z-index: 999;
+    }
+
+    .mobile-nav.show {
+        display: flex;
+    }
+
+    .mobile-nav a {
+        padding: 17px 5%;
+
+        color: #888;
+
+        text-decoration: none;
+
+        border-bottom: 1px solid #1c1c1c;
+    }
+
+    .mobile-nav a.active {
+        color: #ffffff;
+    }
+
+    .page-hero {
+        padding: 90px 5%;
+
+        min-height: 500px;
+    }
+
+    .about-community,
+    .feature-section,
+    .client-section,
+    .verification-section {
+        padding: 80px 5%;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .verification-flow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .community-cta {
+        margin: 70px 5%;
+
+        padding: 50px 30px;
+    }
+
+    .footer {
+        padding: 60px 5% 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 425px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .page-hero h1 {
+        font-size: 45px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .about-community,
+    .feature-section,
+    .client-section,
+    .verification-section {
+        padding: 70px 5%;
+    }
+
+    .about-content h2,
+    .client-content h2,
+    .verification-content h2 {
+        font-size: 38px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .verification-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .community-cta {
+        padding: 40px 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 375px) {
+
+    .page-hero h1 {
+        font-size: 40px;
+    }
+
+    .about-content h2,
+    .client-content h2,
+    .verification-content h2 {
+        font-size: 34px;
+    }
+
+}

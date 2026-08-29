@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Join Community | VORVENA</title>
+
+    <link rel="stylesheet" href="join.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <a href="home.html" class="logo">VORVENA</a>
+
+        <nav class="nav">
+
+            <a href="home.html">Home</a>
+
+            <a href="community.html">Community</a>
+
+            <a href="profiles.html">Profiles</a>
+
+            <a href="clients.html">Clients</a>
+
+            <a href="join.html" class="active">
+                Join Community
+            </a>
+
+            <a href="login.html">Login</a>
+
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+
+        <a href="home.html">Home</a>
+
+        <a href="community.html">
+            Community
+        </a>
+
+        <a href="profiles.html">
+            Profiles
+        </a>
+
+        <a href="clients.html">
+            Clients
+        </a>
+
+        <a href="join.html" class="active">
+            Join Community
+        </a>
+
+        <a href="login.html">
+            Login
+        </a>
+
+    </div>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- HERO -->
+        <section class="join-hero">
+
+            <p>JOIN VORVENA</p>
+
+            <h1>
+                TURN YOUR
+                <span>SKILLS</span>
+                INTO OPPORTUNITY.
+            </h1>
+
+            <p class="hero-text">
+                Apply to become part of a professional
+                community built to connect skilled people
+                with real opportunities.
+            </p>
+
+        </section>
+
+
+        <!-- APPLICATION -->
+        <section class="application-section">
+
+            <div class="form-heading">
+
+                <p>01 — APPLICATION</p>
+
+                <h2>
+                    TELL US
+                    <span>ABOUT YOU.</span>
+                </h2>
+
+                <p>
+                    Complete the application below. Your
+                    information will be reviewed by the
+                    VORVENA administration team.
+                </p>
+
+            </div>
+
+
+            <form id="joinForm" enctype="multipart/form-data">
+
+
+                <!-- PERSONAL INFORMATION -->
+
+                <div class="form-section">
+
+                    <div class="form-section-title">
+
+                        <span>01</span>
+
+                        <h3>
+                            Personal Information
+                        </h3>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+
+                            <label for="firstName">
+                                First Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                name="firstName"
+                                required
+                                placeholder="Enter your first name"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="lastName">
+                                Last Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="lastName"
+                                name="lastName"
+                                required
+                                placeholder="Enter your last name"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="email">
+                                Email Address *
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                placeholder="Enter your email"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="phone">
+                                Phone Number *
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                required
+                                placeholder="Enter your phone number"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="country">
+                                Country *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="country"
+                                name="country"
+                                required
+                                placeholder="e.g. Nigeria"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="city">
+                                City
+                            </label>
+
+                            <input
+                                type="text"
+                                id="city"
+                                name="city"
+                                placeholder="e.g. Abuja"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROFILE PICTURE -->
+
+                <div class="form-section">
+
+                    <div class="form-section-title">
+
+                        <span>02</span>
+
+                        <h3>
+                            Profile Picture
+                        </h3>
+
+                    </div>
+
+
+                    <div class="upload-box">
+
+                        <div class="upload-icon">
+                            +
+                        </div>
+
+                        <h3>
+                            Upload Your Picture
+                        </h3>
+
+                        <p>
+                            Use a clear professional picture.
+                            This picture may appear on your
+                            public VORVENA profile after approval.
+                        </p>
+
+                        <label
+                            for="profilePicture"
+                            class="upload-btn"
+                        >
+                            Choose Picture
+                        </label>
+
+                        <input
+                            type="file"
+                            id="profilePicture"
+                            name="profilePicture"
+                            accept="image/png, image/jpeg, image/webp"
+                            required
+                        >
+
+                        <div
+                            id="imagePreview"
+                            class="image-preview"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROFESSIONAL INFORMATION -->
+
+                <div class="form-section">
+
+                    <div class="form-section-title">
+
+                        <span>03</span>
+
+                        <h3>
+                            Professional Information
+                        </h3>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="input-group full">
+
+                            <label for="profession">
+                                Main Profession *
+                            </label>
+
+                            <select
+                                id="profession"
+                                name="profession"
+                                required
+                            >
+
+                                <option value="">
+                                    Select your profession
+                                </option>
+
+                                <option value="frontend-developer">
+                                    Frontend Developer
+                                </option>
+
+                                <option value="backend-developer">
+                                    Backend Developer
+                                </option>
+
+                                <option value="fullstack-developer">
+                                    Full Stack Developer
+                                </option>
+
+                                <option value="graphic-designer">
+                                    Graphic Designer
+                                </option>
+
+                                <option value="motion-designer">
+                                    Motion Designer
+                                </option>
+
+                                <option value="ui-ux-designer">
+                                    UI/UX Designer
+                                </option>
+
+                                <option value="photographer">
+                                    Photographer
+                                </option>
+
+                                <option value="writer">
+                                    Writer
+                                </option>
+
+                                <option value="marketer">
+                                    Digital Marketer
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group full">
+
+                            <label for="experience">
+                                Years of Experience *
+                            </label>
+
+                            <select
+                                id="experience"
+                                name="experience"
+                                required
+                            >
+
+                                <option value="">
+                                    Select experience
+                                </option>
+
+                                <option value="less-than-1">
+                                    Less than 1 year
+                                </option>
+
+                                <option value="1-2">
+                                    1–2 years
+                                </option>
+
+                                <option value="3-5">
+                                    3–5 years
+                                </option>
+
+                                <option value="6-10">
+                                    6–10 years
+                                </option>
+
+                                <option value="10-plus">
+                                    10+ years
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group full">
+
+                            <label for="skills">
+                                Skills *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="skills"
+                                name="skills"
+                                required
+                                placeholder="e.g. HTML, CSS, JavaScript, React"
+                            >
+
+                            <small>
+                                Separate multiple skills with commas.
+                            </small>
+
+                        </div>
+
+
+                        <div class="input-group full">
+
+                            <label for="bio">
+                                Professional Bio *
+                            </label>
+
+                            <textarea
+                                id="bio"
+                                name="bio"
+                                rows="6"
+                                required
+                                placeholder="Tell us briefly about your professional experience and what you do..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WORK INFORMATION -->
+
+                <div class="form-section">
+
+                    <div class="form-section-title">
+
+                        <span>04</span>
+
+                        <h3>
+                            Work & Portfolio
+                        </h3>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="portfolio">
+                            Portfolio Link
+                        </label>
+
+                        <input
+                            type="url"
+                            id="portfolio"
+                            name="portfolio"
+                            placeholder="https://yourportfolio.com"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="cv">
+                            Upload CV *
+                        </label>
+
+                        <input
+                            type="file"
+                            id="cv"
+                            name="cv"
+                            accept=".pdf,.doc,.docx"
+                            required
+                        >
+
+                        <small>
+                            Your CV is for administration review
+                            and will not be publicly displayed.
+                        </small>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="workSamples">
+                            Work Samples / Additional Link
+                        </label>
+
+                        <input
+                            type="url"
+                            id="workSamples"
+                            name="workSamples"
+                            placeholder="https://..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACCOUNT -->
+
+                <div class="form-section">
+
+                    <div class="form-section-title">
+
+                        <span>05</span>
+
+                        <h3>
+                            Account
+                        </h3>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+
+                            <label for="password">
+                                Password *
+                            </label>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                minlength="8"
+                                required
+                                placeholder="Minimum 8 characters"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="confirmPassword">
+                                Confirm Password *
+                            </label>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                minlength="8"
+                                required
+                                placeholder="Confirm your password"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AGREEMENT -->
+
+                <div class="agreement-section">
+
+                    <label class="checkbox-row">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            name="terms"
+                            required
+                        >
+
+                        <span>
+                            I agree to the
+                            <a href="terms.html">
+                                Terms & Conditions
+                            </a>,
+                            <a href="privacy.html">
+                                Privacy Policy
+                            </a>
+                            and
+                            <a href="guidelines.html">
+                                Community Guidelines
+                            </a>.
+                        </span>
+
+                    </label>
+
+
+                    <label class="checkbox-row">
+
+                        <input
+                            type="checkbox"
+                            id="paymentAgreement"
+                            name="paymentAgreement"
+                            required
+                        >
+
+                        <span>
+                            I understand that approved job offers
+                            received through VORVENA are subject
+                            to the platform's agreed payment
+                            structure and applicable terms.
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <div class="submit-area">
+
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+                        Submit Application →
+                    </button>
+
+                    <p>
+                        Your application will be reviewed by
+                        the VORVENA administration team.
+                    </p>
+
+                </div>
+
+
+                <!-- STATUS -->
+
+                <div
+                    id="formMessage"
+                    class="form-message"
+                ></div>
+
+
+            </form>
+
+        </section>
+
+
+        <!-- PROCESS -->
+
+        <section class="process-section">
+
+            <div class="section-label">
+                <span>02</span>
+                WHAT HAPPENS NEXT
+            </div>
+
+
+            <div class="process-grid">
+
+                <div class="process-card">
+
+                    <strong>01</strong>
+
+                    <h3>
+                        Submit
+                    </h3>
+
+                    <p>
+                        Complete and submit your application.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <strong>02</strong>
+
+                    <h3>
+                        Review
+                    </h3>
+
+                    <p>
+                        Our administrators review your
+                        professional information and CV.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <strong>03</strong>
+
+                    <h3>
+                        Approval
+                    </h3>
+
+                    <p>
+                        If approved, your professional
+                        profile is created.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <strong>04</strong>
+
+                    <h3>
+                        Opportunity
+                    </h3>
+
+                    <p>
+                        Your approved profile can become
+                        discoverable to clients.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <h2>VORVENA</h2>
+
+                <p>
+                    Connecting skilled people with
+                    real opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Explore</h3>
+
+                <a href="home.html">Home</a>
+
+                <a href="community.html">Community</a>
+
+                <a href="profiles.html">Profiles</a>
+
+                <a href="clients.html">Clients</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Join</h3>
+
+                <a href="join.html">
+                    Join Community
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Legal</h3>
+
+                <a href="terms.html">
+                    Terms & Conditions
+                </a>
+
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="guidelines.html">
+                    Community Guidelines
+                </a>
+
+                <a href="#" id="feedbackBtn">
+                    💬 Give Feedback
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 VORVENA. All rights reserved.
+            </p>
+
+            <p>
+                Built for talent. Built for opportunity.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="join.js"></script>
+
+</body>
+
+</html>
+```

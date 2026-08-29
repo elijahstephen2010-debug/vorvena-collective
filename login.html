@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | VORVENA</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <a href="home.html" class="logo">
+            VORVENA
+        </a>
+
+        <nav class="nav">
+
+            <a href="home.html">Home</a>
+
+            <a href="community.html">Community</a>
+
+            <a href="profiles.html">Profiles</a>
+
+            <a href="clients.html">Clients</a>
+
+            <a href="join.html">Join Community</a>
+
+            <a href="login.html" class="active">
+                Login
+            </a>
+
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- MOBILE NAV -->
+
+    <div class="mobile-nav" id="mobileNav">
+
+        <a href="home.html">
+            Home
+        </a>
+
+        <a href="community.html">
+            Community
+        </a>
+
+        <a href="profiles.html">
+            Profiles
+        </a>
+
+        <a href="clients.html">
+            Clients
+        </a>
+
+        <a href="join.html">
+            Join Community
+        </a>
+
+        <a href="login.html" class="active">
+            Login
+        </a>
+
+    </div>
+
+
+    <!-- MAIN -->
+
+    <main>
+
+        <section class="login-section">
+
+            <div class="login-intro">
+
+                <p>VORVENA ACCESS</p>
+
+                <h1>
+                    WELCOME
+                    <span>BACK.</span>
+                </h1>
+
+                <p>
+                    Sign in to access your VORVENA account,
+                    manage your profile and stay connected
+                    with opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="login-card">
+
+                <div class="card-heading">
+
+                    <p>
+                        ACCOUNT LOGIN
+                    </p>
+
+                    <h2>
+                        SIGN IN
+                    </h2>
+
+                </div>
+
+
+                <form id="loginForm">
+
+
+                    <!-- EMAIL -->
+
+                    <div class="input-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="input-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="password-wrapper">
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="togglePassword"
+                                class="password-toggle"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OPTIONS -->
+
+                    <div class="login-options">
+
+                        <label class="remember">
+
+                            <input
+                                type="checkbox"
+                                id="remember"
+                            >
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+
+                        <a href="#" id="forgotPassword">
+                            Forgot password?
+                        </a>
+
+                    </div>
+
+
+                    <!-- LOGIN -->
+
+                    <button
+                        type="submit"
+                        class="login-btn"
+                    >
+                        Sign In →
+                    </button>
+
+
+                    <!-- MESSAGE -->
+
+                    <div
+                        id="loginMessage"
+                        class="login-message"
+                    ></div>
+
+                </form>
+
+
+                <!-- JOIN -->
+
+                <div class="join-prompt">
+
+                    <p>
+                        Don't have a VORVENA account?
+                    </p>
+
+                    <a href="join.html">
+                        Apply to Join →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACCESS INFORMATION -->
+
+        <section class="access-section">
+
+            <div class="section-label">
+
+                <span>01</span>
+
+                ACCOUNT ACCESS
+
+            </div>
+
+
+            <div class="access-grid">
+
+
+                <div class="access-card">
+
+                    <span>01</span>
+
+                    <h3>
+                        Professionals
+                    </h3>
+
+                    <p>
+                        Approved professionals can use
+                        their account to manage their
+                        profile and access available
+                        community opportunities.
+                    </p>
+
+                </div>
+
+
+                <div class="access-card">
+
+                    <span>02</span>
+
+                    <h3>
+                        Clients
+                    </h3>
+
+                    <p>
+                        Clients can use their account to
+                        manage project requests and their
+                        interactions through VORVENA.
+                    </p>
+
+                </div>
+
+
+                <div class="access-card">
+
+                    <span>03</span>
+
+                    <h3>
+                        Administrators
+                    </h3>
+
+                    <p>
+                        Administrators will have a separate
+                        protected dashboard for reviewing
+                        applications and managing the platform.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <h2>
+                    VORVENA
+                </h2>
+
+                <p>
+                    Connecting skilled people with
+                    real opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="home.html">
+                    Home
+                </a>
+
+                <a href="community.html">
+                    Community
+                </a>
+
+                <a href="profiles.html">
+                    Profiles
+                </a>
+
+                <a href="clients.html">
+                    Clients
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Join
+                </h3>
+
+                <a href="join.html">
+                    Join Community
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Legal
+                </h3>
+
+                <a href="terms.html">
+                    Terms & Conditions
+                </a>
+
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="guidelines.html">
+                    Community Guidelines
+                </a>
+
+                <a href="#" id="feedbackBtn">
+                    💬 Give Feedback
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 VORVENA. All rights reserved.
+            </p>
+
+            <p>
+                Built for talent. Built for opportunity.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

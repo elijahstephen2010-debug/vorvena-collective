@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    height: 80px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #222;
+
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: #888;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #ffffff;
+}
+
+
+/* ================= MOBILE MENU ================= */
+
+.menu-btn {
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+
+/* ================= FEEDBACK ================= */
+
+.feedback-section {
+    min-height: 750px;
+
+    padding: 110px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 520px;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+/* ================= INTRO ================= */
+
+.feedback-intro {
+    max-width: 700px;
+}
+
+.label {
+    color: #666;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.feedback-intro h1 {
+    font-size: clamp(55px, 7vw, 95px);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+}
+
+.feedback-intro h1 span {
+    color: #777;
+}
+
+.description {
+    max-width: 520px;
+
+    color: #888;
+
+    font-size: 16px;
+
+    margin-top: 30px;
+}
+
+
+/* ================= NOTE ================= */
+
+.feedback-note {
+    display: flex;
+
+    gap: 20px;
+
+    align-items: flex-start;
+
+    margin-top: 60px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #222;
+
+    max-width: 500px;
+}
+
+.feedback-note span {
+    color: #ffffff;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+.feedback-note p {
+    color: #666;
+
+    font-size: 13px;
+}
+
+
+/* ================= CARD ================= */
+
+.feedback-card {
+    background: #080808;
+
+    border: 1px solid #292929;
+
+    padding: 45px;
+}
+
+.card-heading {
+    margin-bottom: 35px;
+}
+
+.card-heading p {
+    color: #666;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+.card-heading h2 {
+    font-size: 32px;
+}
+
+
+/* ================= FORM ================= */
+
+.input-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+}
+
+.input-group label {
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+
+    background: #050505;
+
+    border: 1px solid #292929;
+
+    color: #ffffff;
+
+    padding: 14px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #666;
+}
+
+.input-group select {
+    cursor: pointer;
+}
+
+.input-group textarea {
+    resize: vertical;
+
+    min-height: 150px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.submit-btn {
+    width: 100%;
+
+    padding: 16px;
+
+    background: #ffffff;
+
+    color: #000000;
+
+    border: none;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #ccc;
+}
+
+.feedback-message {
+    text-align: center;
+
+    color: #999;
+
+    font-size: 13px;
+
+    margin-top: 15px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #030303;
+
+    border-top: 1px solid #222;
+
+    padding: 70px 7% 25px;
+}
+
+.footer-container {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+
+    gap: 40px;
+}
+
+.footer-brand h2 {
+    letter-spacing: 4px;
+}
+
+.footer-brand p {
+    color: #777;
+
+    max-width: 250px;
+
+    margin-top: 15px;
+}
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-column h3 {
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #777;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.footer-column a:hover,
+.footer-column a.active {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #1d1d1d;
+
+    margin-top: 60px;
+
+    padding-top: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #555;
+
+    font-size: 12px;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        height: 70px;
+
+        padding: 0 5%;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .mobile-nav {
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #050505;
+
+        border-bottom: 1px solid #222;
+
+        display: none;
+
+        flex-direction: column;
+
+        z-index: 999;
+    }
+
+    .mobile-nav.show {
+        display: flex;
+    }
+
+    .mobile-nav a {
+        padding: 17px 5%;
+
+        color: #888;
+
+        text-decoration: none;
+
+        border-bottom: 1px solid #1c1c1c;
+    }
+
+    .mobile-nav a:hover {
+        color: #ffffff;
+    }
+
+    .feedback-section {
+        padding: 80px 5%;
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .feedback-card {
+        width: 100%;
+
+        max-width: 600px;
+
+        margin: auto;
+    }
+
+    .footer {
+        padding: 60px 5% 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 425px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .feedback-section {
+        padding: 70px 5%;
+    }
+
+    .feedback-intro h1 {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+    .feedback-card {
+        padding: 30px 22px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 375px) {
+
+    .feedback-intro h1 {
+        font-size: 42px;
+    }
+
+    .feedback-card {
+        padding: 25px 18px;
+    }
+
+}
