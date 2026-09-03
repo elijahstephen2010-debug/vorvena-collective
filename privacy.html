@@ -12,69 +12,59 @@
 
 <body>
 
-    <!-- HEADER -->
+    <!-- ================= HEADER ================= -->
 
     <header class="header">
 
-        <a href="index.html" class="logo">
-            VORVENA
-        </a>
+        <div class="nav-wrapper">
 
-        <nav class="nav">
+            <a href="index.html" class="logo">
+                VORVENA
+            </a>
 
-            <a href="index.html">Home</a>
+            <nav class="nav" id="navLinks">
 
-            <a href="community.html">Community</a>
+                <a href="index.html" class="nav-link">
+                    Home
+                </a>
 
-            <a href="profiles.html">Profiles</a>
+                <a href="community.html" class="nav-link">
+                    Community
+                </a>
 
-            <a href="clients.html">Clients</a>
+                <a href="profiles.html" class="nav-link">
+                    Profiles
+                </a>
 
-            <a href="join.html">Join Community</a>
+                <a href="clients.html" class="nav-link">
+                    Clients
+                </a>
 
-            <a href="login.html">Login</a>
+                <a href="join.html" class="nav-link join-link">
+                    Join Community
+                </a>
 
-        </nav>
 
-        <button class="menu-btn" id="menuBtn">
-            ☰
-        </button>
+            </nav>
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
 
     </header>
 
 
-    <!-- MOBILE NAV -->
-
-    <div class="mobile-nav" id="mobileNav">
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="community.html">
-            Community
-        </a>
-
-        <a href="profiles.html">
-            Profiles
-        </a>
-
-        <a href="clients.html">
-            Clients
-        </a>
-
-        <a href="join.html">
-            Join Community
-        </a>
-
-        <a href="login.html">
-            Login
-        </a>
-
-    </div>
-
-
-    <!-- MAIN -->
+    <!-- ================= MAIN ================= -->
 
     <main>
 
@@ -82,31 +72,37 @@
 
         <section class="privacy-hero">
 
-            <p>
-                VORVENA / LEGAL
-            </p>
+            <div class="hero-content">
 
-            <h1>
-                PRIVACY
-                <span>POLICY.</span>
-            </h1>
+                <p class="eyebrow">
+                    VORVENA / LEGAL
+                </p>
 
-            <p class="hero-text">
-                Your information matters. This policy explains
-                what information VORVENA collects, why we collect
-                it and how we protect it.
-            </p>
+                <h1>
+                    PRIVACY
+                    <span>POLICY.</span>
+                </h1>
 
-            <div class="updated">
-                Last Updated: August 2026
+                <p class="hero-text">
+                    Your information matters. This policy explains
+                    what information VORVENA collects, why we collect
+                    it and how we protect it.
+                </p>
+
+                <div class="updated">
+                    Last Updated: August 2026
+                </div>
+
             </div>
 
         </section>
 
 
-        <!-- CONTENT -->
+        <!-- ================= CONTENT ================= -->
 
         <section class="privacy-content">
+
+            <!-- SIDEBAR -->
 
             <aside class="privacy-sidebar">
 
@@ -148,6 +144,8 @@
 
             </aside>
 
+
+            <!-- ARTICLE -->
 
             <article class="privacy-article">
 
@@ -474,7 +472,6 @@
 
                 </section>
 
-
             </article>
 
         </section>
@@ -482,18 +479,17 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- ================= FOOTER ================= -->
 
     <footer class="footer">
 
-        <div class="footer-container">
-
+        <div class="footer-top">
 
             <div class="footer-brand">
 
-                <h2>
+                <a href="index.html" class="footer-logo">
                     VORVENA
-                </h2>
+                </a>
 
                 <p>
                     Connecting skilled people with
@@ -538,10 +534,6 @@
                     Join Community
                 </a>
 
-                <a href="login.html">
-                    Login
-                </a>
-
             </div>
 
 
@@ -563,7 +555,7 @@
                     Community Guidelines
                 </a>
 
-                <a href="#" id="feedbackBtn">
+                <a href="feedback.html">
                     💬 Give Feedback
                 </a>
 

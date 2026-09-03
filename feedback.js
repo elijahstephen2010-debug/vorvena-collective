@@ -1,32 +1,71 @@
-const menuBtn =
-    document.getElementById("menuBtn");
+const currentPage =
+    window.location.pathname.split("/").pop() || "index.html";
 
-const mobileNav =
-    document.getElementById("mobileNav");
+const navItems =
+    document.querySelectorAll(".nav-link");
+
+navItems.forEach((link) => {
+
+    const linkPage =
+        link.getAttribute("href");
+
+    if (linkPage === currentPage) {
+
+        link.classList.add("active");
+
+    } else {
+
+        link.classList.remove("active");
+
+    }
+
+});
 
 
 /* ================= MOBILE MENU ================= */
 
-menuBtn.addEventListener("click", () => {
+const menuBtn =
+    document.getElementById("menuBtn");
 
-    mobileNav.classList.toggle("show");
+const navLinks =
+    document.getElementById("navLinks");
 
-});
+if (menuBtn && navLinks) {
 
+    menuBtn.addEventListener("click", () => {
 
-const mobileLinks =
-    mobileNav.querySelectorAll("a");
+        navLinks.classList.toggle("open");
 
+        const isOpen =
+            navLinks.classList.contains("open");
 
-mobileLinks.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        mobileNav.classList.remove("show");
+        menuBtn.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
 
     });
 
-});
+
+    const mobileLinks =
+        navLinks.querySelectorAll("a");
+
+    mobileLinks.forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("open");
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
+
+    });
+
+}
 
 
 /* ================= FEEDBACK FORM ================= */
@@ -34,17 +73,20 @@ mobileLinks.forEach(link => {
 const feedbackForm =
     document.getElementById("feedbackForm");
 
-const feedbackMessage =
-    document.getElementById("feedbackMessage");
+const formMessage =
+    document.getElementById("formMessage");
 
+if (feedbackForm && formMessage) {
 
-feedbackForm.addEventListener("submit", event => {
+    feedbackForm.addEventListener("submit", (event) => {
 
-    event.preventDefault();
+        event.preventDefault();
 
-    feedbackMessage.textContent =
-        "Thank you. Your feedback has been received.";
+        formMessage.textContent =
+            "Thank you for your feedback. Your message is ready to be connected to the VORVENA backend.";
 
-    feedbackForm.reset();
+        feedbackForm.reset();
 
-});
+    });
+
+}

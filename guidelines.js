@@ -1,44 +1,70 @@
-const menuBtn =
-    document.getElementById("menuBtn");
+/* ================= ACTIVE NAV ================= */
 
-const mobileNav =
-    document.getElementById("mobileNav");
+const currentPage =
+    window.location.pathname.split("/").pop() || "index.html";
+
+const navItems =
+    document.querySelectorAll(".nav-link");
+
+navItems.forEach((link) => {
+
+    const linkPage =
+        link.getAttribute("href");
+
+    if (linkPage === currentPage) {
+
+        link.classList.add("active");
+
+    } else {
+
+        link.classList.remove("active");
+
+    }
+
+});
 
 
 /* ================= MOBILE MENU ================= */
 
-menuBtn.addEventListener("click", () => {
+const menuBtn =
+    document.getElementById("menuBtn");
 
-    mobileNav.classList.toggle("show");
+const navLinks =
+    document.getElementById("navLinks");
 
-});
+if (menuBtn && navLinks) {
 
+    menuBtn.addEventListener("click", () => {
 
-const mobileLinks =
-    mobileNav.querySelectorAll("a");
+        navLinks.classList.toggle("open");
 
+        const isOpen =
+            navLinks.classList.contains("open");
 
-mobileLinks.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        mobileNav.classList.remove("show");
+        menuBtn.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
 
     });
 
-});
 
+    const mobileLinks =
+        navLinks.querySelectorAll("a");
 
-/* ================= FEEDBACK ================= */
+    mobileLinks.forEach((link) => {
 
-const feedbackBtn =
-    document.getElementById("feedbackBtn");
+        link.addEventListener("click", () => {
 
+            navLinks.classList.remove("open");
 
-feedbackBtn.addEventListener("click", event => {
+            menuBtn.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
-    event.preventDefault();
+        });
 
-    alert("Feedback system coming soon.");
+    });
 
-});
+}

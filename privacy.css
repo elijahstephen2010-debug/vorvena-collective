@@ -1,3 +1,7 @@
+/* =========================
+   RESET
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,27 +19,39 @@ body {
     line-height: 1.7;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-/* ================= HEADER ================= */
+
+/* =========================
+   HEADER
+========================= */
 
 .header {
+    width: 100%;
     height: 80px;
-    padding: 0 7%;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+    background: #050505;
     border-bottom: 1px solid #222;
 
     position: relative;
     z-index: 1000;
 }
 
+.nav-wrapper {
+    width: min(1400px, 92%);
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .logo {
     color: #ffffff;
-
-    text-decoration: none;
 
     font-size: 25px;
     font-weight: 800;
@@ -45,72 +61,116 @@ body {
 
 .nav {
     display: flex;
-
+    align-items: center;
     gap: 30px;
 }
 
-.nav a {
+.nav-link {
+    position: relative;
+
     color: #888;
-
-    text-decoration: none;
-
     font-size: 14px;
 
     transition: 0.3s;
 }
 
-.nav a:hover {
+.nav-link:hover {
     color: #ffffff;
 }
 
+.nav-link.active {
+    color: #ffffff;
+    font-weight: 700;
+}
 
-/* ================= MOBILE MENU ================= */
+.nav-link.active::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -9px;
+
+    width: 100%;
+    height: 2px;
+
+    background: #ffffff;
+}
+
+.join-link {
+    border: 1px solid #555;
+    padding: 10px 15px;
+    color: #ffffff;
+}
+
+.join-link:hover {
+    background: #ffffff;
+    color: #050505;
+}
+
+.join-link.active::after {
+    display: none;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
 
 .menu-btn {
     display: none;
 
+    width: 35px;
+
     background: transparent;
-
     border: none;
-
-    color: #ffffff;
-
-    font-size: 28px;
 
     cursor: pointer;
 }
 
-.mobile-nav {
-    display: none;
+.menu-btn span {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background: #ffffff;
+
+    margin: 6px 0;
 }
 
 
-/* ================= HERO ================= */
+/* =========================
+   HERO
+========================= */
 
 .privacy-hero {
-    padding: 110px 7% 90px;
-
     border-bottom: 1px solid #222;
+
+    padding: 110px 0 90px;
 }
 
-.privacy-hero > p:first-child {
+.hero-content {
+    width: min(1400px, 92%);
+    margin: auto;
+}
+
+.eyebrow {
     color: #666;
 
     font-size: 11px;
-
     letter-spacing: 4px;
 
     margin-bottom: 20px;
 }
 
 .privacy-hero h1 {
+    max-width: 1000px;
+
     font-size: clamp(55px, 8vw, 105px);
 
     line-height: 0.9;
 
     letter-spacing: -5px;
-
-    max-width: 1000px;
 }
 
 .privacy-hero h1 span {
@@ -136,28 +196,29 @@ body {
 }
 
 
-/* ================= CONTENT ================= */
+/* =========================
+   CONTENT
+========================= */
 
 .privacy-content {
-    max-width: 1300px;
-
+    width: min(1400px, 92%);
     margin: auto;
 
-    padding: 100px 7%;
+    padding: 100px 0;
 
     display: grid;
-
     grid-template-columns: 230px 1fr;
 
     gap: 90px;
 }
 
 
-/* ================= SIDEBAR ================= */
+/* =========================
+   SIDEBAR
+========================= */
 
 .privacy-sidebar {
     position: sticky;
-
     top: 30px;
 
     align-self: start;
@@ -167,7 +228,6 @@ body {
     color: #555;
 
     font-size: 10px;
-
     letter-spacing: 3px;
 
     margin-bottom: 20px;
@@ -177,8 +237,6 @@ body {
     display: block;
 
     color: #666;
-
-    text-decoration: none;
 
     font-size: 12px;
 
@@ -192,7 +250,9 @@ body {
 }
 
 
-/* ================= ARTICLE ================= */
+/* =========================
+   ARTICLE
+========================= */
 
 .privacy-article {
     max-width: 760px;
@@ -200,7 +260,6 @@ body {
 
 .privacy-article section {
     padding-bottom: 70px;
-
     margin-bottom: 70px;
 
     border-bottom: 1px solid #202020;
@@ -210,7 +269,6 @@ body {
     color: #666;
 
     font-size: 11px;
-
     letter-spacing: 2px;
 }
 
@@ -233,11 +291,12 @@ body {
 }
 
 
-/* ================= LIST ================= */
+/* =========================
+   LIST
+========================= */
 
 .privacy-article ul {
     padding-left: 20px;
-
     margin-top: 20px;
 }
 
@@ -252,7 +311,9 @@ body {
 }
 
 
-/* ================= NOTE ================= */
+/* =========================
+   NOTE
+========================= */
 
 .privacy-note {
     margin-top: 30px;
@@ -281,7 +342,9 @@ body {
 }
 
 
-/* ================= FINAL ================= */
+/* =========================
+   FINAL
+========================= */
 
 .final-section {
     border: 1px solid #292929 !important;
@@ -296,26 +359,33 @@ body {
 }
 
 
-/* ================= FOOTER ================= */
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
     background: #030303;
 
     border-top: 1px solid #222;
 
-    padding: 70px 7% 25px;
+    padding: 70px 0 25px;
 }
 
-.footer-container {
-    display: grid;
+.footer-top {
+    width: min(1400px, 92%);
+    margin: auto;
 
+    display: grid;
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
 
     gap: 40px;
 }
 
-.footer-brand h2 {
-    letter-spacing: 4px;
+.footer-logo {
+    font-size: 25px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
 }
 
 .footer-brand p {
@@ -328,7 +398,6 @@ body {
 
 .footer-column {
     display: flex;
-
     flex-direction: column;
 
     gap: 10px;
@@ -343,8 +412,6 @@ body {
 .footer-column a {
     color: #777;
 
-    text-decoration: none;
-
     font-size: 13px;
 
     transition: 0.3s;
@@ -355,14 +422,14 @@ body {
 }
 
 .footer-bottom {
-    border-top: 1px solid #1d1d1d;
+    width: min(1400px, 92%);
+    margin: 60px auto 0;
 
-    margin-top: 60px;
+    border-top: 1px solid #1d1d1d;
 
     padding-top: 20px;
 
     display: flex;
-
     justify-content: space-between;
 
     gap: 20px;
@@ -375,64 +442,75 @@ body {
 }
 
 
-/* ================= TABLET ================= */
+/* =========================
+   TABLET — 768px
+========================= */
 
 @media (max-width: 768px) {
 
     .header {
         height: 70px;
+    }
 
-        padding: 0 5%;
+    .nav-wrapper {
+        width: 90%;
     }
 
     .nav {
         display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 5%;
+
+        width: 90%;
+
+        background: #050505;
+
+        border: 1px solid #222;
+
+        padding: 10px 20px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 15px 5px;
+
+        border-bottom: 1px solid #1c1c1c;
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link.active::after {
+        display: none;
+    }
+
+    .join-link {
+        margin: 10px 0;
+        text-align: center;
     }
 
     .menu-btn {
         display: block;
     }
 
-    .mobile-nav {
-        position: absolute;
-
-        top: 70px;
-
-        left: 0;
-
-        width: 100%;
-
-        background: #050505;
-
-        border-bottom: 1px solid #222;
-
-        display: none;
-
-        flex-direction: column;
-
-        z-index: 999;
-    }
-
-    .mobile-nav.show {
-        display: flex;
-    }
-
-    .mobile-nav a {
-        padding: 17px 5%;
-
-        color: #888;
-
-        text-decoration: none;
-
-        border-bottom: 1px solid #1c1c1c;
-    }
-
     .privacy-hero {
-        padding: 80px 5%;
+        padding: 80px 0;
     }
 
     .privacy-content {
-        padding: 80px 5%;
+        padding: 80px 0;
 
         grid-template-columns: 1fr;
 
@@ -447,11 +525,7 @@ body {
         max-width: 100%;
     }
 
-    .footer {
-        padding: 60px 5% 25px;
-    }
-
-    .footer-container {
+    .footer-top {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -461,18 +535,35 @@ body {
 }
 
 
-/* ================= MOBILE ================= */
+/* =========================
+   MOBILE — 425px
+========================= */
 
 @media (max-width: 425px) {
+
+    .nav-wrapper {
+        width: 90%;
+    }
 
     .logo {
         font-size: 21px;
     }
 
+    .privacy-hero {
+        padding: 70px 0;
+    }
+
     .privacy-hero h1 {
         font-size: 47px;
-
         letter-spacing: -2px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .privacy-content {
+        padding: 65px 0;
     }
 
     .privacy-article h2 {
@@ -488,13 +579,19 @@ body {
         padding: 25px !important;
     }
 
-    .footer-container {
+    .footer-top {
         grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        gap: 10px;
     }
 }
 
 
-/* ================= SMALL MOBILE ================= */
+/* =========================
+   SMALL MOBILE — 375px
+========================= */
 
 @media (max-width: 375px) {
 
@@ -506,4 +603,7 @@ body {
         font-size: 25px;
     }
 
+    .hero-text {
+        font-size: 14px;
+    }
 }

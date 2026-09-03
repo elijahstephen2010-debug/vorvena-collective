@@ -12,235 +12,313 @@
 
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
+    <!-- ================= HEADER ================= -->
 
-        <a href="index.html" class="logo">VORVENA</a>
+    <header class="site-header">
 
-        <nav class="nav">
+        <div class="nav-container">
 
-            <a href="index.html">Home</a>
-
-            <a href="community.html">Community</a>
-
-            <a href="profiles.html" class="active">
-                Profiles
+            <a href="index.html" class="logo">
+                VORVENA
             </a>
 
-            <a href="clients.html">Clients</a>
+            <nav class="desktop-nav">
 
+                <a href="index.html">Home</a>
+                <a href="community.html">Community</a>
+                <a href="profiles.html" class="active">Profiles</a>
+                <a href="clients.html">Clients</a>
+                <a href="join.html">Join Community</a>
+
+            </nav>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE NAV -->
+
+        <nav class="mobile-nav" id="mobileNav">
+
+            <a href="index.html">Home</a>
+            <a href="community.html">Community</a>
+            <a href="profiles.html" class="active">Profiles</a>
+            <a href="clients.html">Clients</a>
             <a href="join.html">Join Community</a>
 
-            <a href="login.html">Login</a>
-
         </nav>
-
-        <button class="menu-btn" id="menuBtn">
-            ☰
-        </button>
 
     </header>
 
 
-    <!-- MOBILE NAV -->
-    <div class="mobile-nav" id="mobileNav">
+    <!-- ================= MAIN ================= -->
 
-        <a href="index.html">Home</a>
-
-        <a href="community.html">
-            Community
-        </a>
-
-        <a href="profiles.html" class="active">
-            Profiles
-        </a>
-
-        <a href="clients.html">
-            Clients
-        </a>
-
-        <a href="join.html">
-            Join Community
-        </a>
-
-        <a href="login.html">
-            Login
-        </a>
-
-    </div>
-
-
-    <!-- MAIN -->
     <main>
 
-        <!-- PAGE INTRO -->
-        <section class="profiles-hero">
 
-            <p>VORVENA PROFESSIONALS</p>
+        <!-- ================= HERO ================= -->
 
-            <h1>
-                FIND THE RIGHT
-                <span>SKILLS.</span>
-            </h1>
+        <section class="hero">
 
-            <p class="hero-text">
-                Explore approved professionals in the VORVENA
-                community and discover the right talent for
-                your next project.
-            </p>
+            <div class="hero-top">
 
-        </section>
+                <span>01 / PROFILES</span>
 
-
-        <!-- SEARCH & FILTER -->
-        <section class="search-section">
-
-            <div class="search-box">
-
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Search by name or profession..."
-                >
-
-                <button id="searchBtn">
-                    Search
-                </button>
+                <span>
+                    VORVENA TALENT NETWORK
+                </span>
 
             </div>
 
 
-            <div class="filter-box">
+            <div class="hero-content">
 
-                <select id="categoryFilter">
+                <h1>
+                    MEET THE PEOPLE
+                    <span>BEHIND THE TALENT.</span>
+                </h1>
 
-                    <option value="all">
-                        All Skills
-                    </option>
+                <p>
+                    Discover professionals across different fields,
+                    explore their skills and find the right person
+                    for your next project.
+                </p>
 
-                    <option value="developer">
-                        Developer
-                    </option>
+            </div>
 
-                    <option value="designer">
-                        Graphic Designer
-                    </option>
 
-                    <option value="motion">
-                        Motion Designer
-                    </option>
+            <div class="hero-bottom">
 
-                    <option value="photographer">
-                        Photographer
-                    </option>
-
-                    <option value="writer">
-                        Writer
-                    </option>
-
-                    <option value="marketer">
-                        Marketer
-                    </option>
-
-                </select>
+                <span>DEVELOPERS</span>
+                <span>DESIGNERS</span>
+                <span>CREATORS</span>
+                <span>MARKETERS</span>
 
             </div>
 
         </section>
 
 
-        <!-- PROFILES -->
-        <section class="profiles-section">
 
-            <div class="section-heading">
+        <!-- ================= DISCOVER ================= -->
 
-                <p>APPROVED MEMBERS</p>
+        <section class="discover-section">
 
-                <h2>
-                    PROFESSIONAL
-                    <span>PROFILES.</span>
-                </h2>
+            <div class="section-label">
+                02 / DISCOVER TALENT
+            </div>
+
+
+            <div class="discover-header">
+
+                <div>
+
+                    <h2>
+                        FIND YOUR
+                        <span>PERSON.</span>
+                    </h2>
+
+                </div>
+
+
+                <p>
+                    Search through the VORVENA community and discover
+                    professionals based on their skills, profession
+                    and experience.
+                </p>
 
             </div>
 
+
+            <!-- SEARCH -->
+
+            <div class="search-area">
+
+                <div class="search-box">
+
+                    <label for="searchInput">
+                        SEARCH
+                    </label>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search by name or skill..."
+                    >
+
+                </div>
+
+
+                <div class="filter-box">
+
+                    <label for="professionFilter">
+                        PROFESSION
+                    </label>
+
+                    <select id="professionFilter">
+
+                        <option value="all">
+                            All Professionals
+                        </option>
+
+                        <option value="Frontend Developer">
+                            Frontend Developer
+                        </option>
+
+                        <option value="Backend Developer">
+                            Backend Developer
+                        </option>
+
+                        <option value="Full Stack Developer">
+                            Full Stack Developer
+                        </option>
+
+                        <option value="Graphic Designer">
+                            Graphic Designer
+                        </option>
+
+                        <option value="Motion Designer">
+                            Motion Designer
+                        </option>
+
+                        <option value="UI/UX Designer">
+                            UI/UX Designer
+                        </option>
+
+                        <option value="Digital Marketer">
+                            Digital Marketer
+                        </option>
+
+                        <option value="Social Media Manager">
+                            Social Media Manager
+                        </option>
+
+                        <option value="Writer">
+                            Writer
+                        </option>
+
+                        <option value="Photographer">
+                            Photographer
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= PROFILE GRID ================= -->
 
             <div class="profiles-grid" id="profilesGrid">
 
 
-                <!-- PROFILE 1 -->
+                <!-- PROFILE 01 -->
 
                 <article
                     class="profile-card"
-                    data-category="developer"
-                    data-name="Elijah Stephen"
+                    data-name="Alex Carter"
+                    data-profession="Frontend Developer"
+                    data-skills="html css javascript react frontend"
                 >
 
                     <div class="profile-image">
+
                         <div class="image-placeholder">
-                            ES
+                            AC
                         </div>
 
-                        <span class="verified">
-                            ✓ VERIFIED
+                        <span class="profile-number">
+                            01
                         </span>
+
                     </div>
 
 
                     <div class="profile-info">
 
-                        <h3>
-                            Elijah Stephen
-                        </h3>
+                        <div class="profile-heading">
 
-                        <p class="profession">
-                            Frontend Developer
+                            <div>
+
+                                <h3>
+                                    Alex Carter
+                                </h3>
+
+                                <span>
+                                    Frontend Developer
+                                </span>
+
+                            </div>
+
+                            <span class="location">
+                                Nigeria
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Builds responsive and modern digital
+                            experiences with a focus on performance,
+                            usability and clean interfaces.
                         </p>
 
-                        <p class="location">
-                            📍 Nigeria
-                        </p>
 
                         <div class="skills">
 
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
+                            <span>React</span>
 
                         </div>
 
-                        <div class="rating">
-                            ★ 4.9
-                        </div>
 
-                        <a
-                            href="#"
-                            class="profile-btn"
-                            data-profile="Elijah Stephen"
-                        >
-                            View Profile →
-                        </a>
+                        <div class="profile-actions">
+
+                            <button
+                                class="hire-btn"
+                                data-professional="Alex Carter"
+                            >
+                                Hire This Professional
+                                <span>↗</span>
+                            </button>
+
+                        </div>
 
                     </div>
 
                 </article>
 
 
-                <!-- PROFILE 2 -->
+
+                <!-- PROFILE 02 -->
 
                 <article
                     class="profile-card"
-                    data-category="designer"
-                    data-name="Amara James"
+                    data-name="Maya Johnson"
+                    data-profession="Graphic Designer"
+                    data-skills="graphic design branding photoshop illustrator"
                 >
 
                     <div class="profile-image">
 
                         <div class="image-placeholder">
-                            AJ
+                            MJ
                         </div>
 
-                        <span class="verified">
-                            ✓ VERIFIED
+                        <span class="profile-number">
+                            02
                         </span>
 
                     </div>
@@ -248,59 +326,78 @@
 
                     <div class="profile-info">
 
-                        <h3>
-                            Amara James
-                        </h3>
+                        <div class="profile-heading">
 
-                        <p class="profession">
-                            Graphic Designer
+                            <div>
+
+                                <h3>
+                                    Maya Johnson
+                                </h3>
+
+                                <span>
+                                    Graphic Designer
+                                </span>
+
+                            </div>
+
+                            <span class="location">
+                                Ghana
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Creates strong visual identities,
+                            marketing materials and brand systems
+                            designed to make businesses stand out.
                         </p>
 
-                        <p class="location">
-                            📍 Nigeria
-                        </p>
 
                         <div class="skills">
 
                             <span>Branding</span>
-                            <span>Flyers</span>
-                            <span>UI Design</span>
+                            <span>Photoshop</span>
+                            <span>Illustrator</span>
 
                         </div>
 
-                        <div class="rating">
-                            ★ 4.8
-                        </div>
 
-                        <a
-                            href="#"
-                            class="profile-btn"
-                            data-profile="Amara James"
-                        >
-                            View Profile →
-                        </a>
+                        <div class="profile-actions">
+
+                            <button
+                                class="hire-btn"
+                                data-professional="Maya Johnson"
+                            >
+                                Hire This Professional
+                                <span>↗</span>
+                            </button>
+
+                        </div>
 
                     </div>
 
                 </article>
 
 
-                <!-- PROFILE 3 -->
+
+                <!-- PROFILE 03 -->
 
                 <article
                     class="profile-card"
-                    data-category="motion"
-                    data-name="Daniel Cole"
+                    data-name="Daniel Smith"
+                    data-profession="Motion Designer"
+                    data-skills="motion graphics animation after effects video"
                 >
 
                     <div class="profile-image">
 
                         <div class="image-placeholder">
-                            DC
+                            DS
                         </div>
 
-                        <span class="verified">
-                            ✓ VERIFIED
+                        <span class="profile-number">
+                            03
                         </span>
 
                     </div>
@@ -308,59 +405,76 @@
 
                     <div class="profile-info">
 
-                        <h3>
-                            Daniel Cole
-                        </h3>
+                        <div class="profile-heading">
 
-                        <p class="profession">
-                            Motion Designer
+                            <div>
+
+                                <h3>
+                                    Daniel Smith
+                                </h3>
+
+                                <span>
+                                    Motion Designer
+                                </span>
+
+                            </div>
+
+                            <span class="location">
+                                Nigeria
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Creates motion graphics, animations and
+                            visual content for brands, campaigns
+                            and digital experiences.
                         </p>
 
-                        <p class="location">
-                            📍 Nigeria
-                        </p>
 
                         <div class="skills">
 
                             <span>Animation</span>
+                            <span>After Effects</span>
                             <span>Motion</span>
-                            <span>Video</span>
 
                         </div>
 
-                        <div class="rating">
-                            ★ 5.0
-                        </div>
 
-                        <a
-                            href="#"
-                            class="profile-btn"
-                            data-profile="Daniel Cole"
-                        >
-                            View Profile →
-                        </a>
+                        <div class="profile-actions">
+
+                            <button
+                                class="hire-btn"
+                                data-professional="Daniel Smith"
+                            >
+                                Hire This Professional
+                                <span>↗</span>
+                            </button>
+
+                        </div>
 
                     </div>
 
                 </article>
 
-
             </div>
+
 
 
             <!-- EMPTY STATE -->
 
             <div
-                class="no-results"
-                id="noResults"
+                class="empty-state"
+                id="emptyState"
             >
 
                 <h3>
-                    No profiles found.
+                    NO PROFESSIONALS FOUND.
                 </h3>
 
                 <p>
-                    Try another name, profession or category.
+                    Try another search or profession.
                 </p>
 
             </div>
@@ -368,71 +482,281 @@
         </section>
 
 
-        <!-- PRIVACY NOTICE -->
 
-        <section class="privacy-notice">
+        <!-- ================= CLIENT FLOW ================= -->
 
-            <div>
+        <section class="client-flow">
 
-                <p class="notice-label">
-                    PRIVACY
-                </p>
+            <div class="section-label">
+                03 / FOR CLIENTS
+            </div>
+
+
+            <div class="flow-grid">
+
+                <div class="flow-heading">
+
+                    <h2>
+                        FOUND
+                        <span>THE RIGHT PERSON?</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="flow-content">
+
+                    <div class="flow-item">
+
+                        <span>01</span>
+
+                        <div>
+
+                            <h3>
+                                Explore
+                            </h3>
+
+                            <p>
+                                Browse professional profiles without
+                                creating an account.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flow-item">
+
+                        <span>02</span>
+
+                        <div>
+
+                            <h3>
+                                Choose
+                            </h3>
+
+                            <p>
+                                Review a professional's skills,
+                                experience and portfolio.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flow-item">
+
+                        <span>03</span>
+
+                        <div>
+
+                            <h3>
+                                Hire
+                            </h3>
+
+                            <p>
+                                Select the professional and begin
+                                the hiring request.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flow-item">
+
+                        <span>04</span>
+
+                        <div>
+
+                            <h3>
+                                Sign In
+                            </h3>
+
+                            <p>
+                                You'll sign in or create a client
+                                account when you're ready to submit
+                                the project.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PAYMENT ================= -->
+
+        <section class="payment-section">
+
+            <div class="section-label">
+                04 / PROJECT STRUCTURE
+            </div>
+
+
+            <div class="payment-grid">
+
+                <div>
+
+                    <h2>
+                        SIMPLE.
+                        <span>TRANSPARENT.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="payment-content">
+
+                    <p>
+                        For approved projects arranged through
+                        VORVENA, the current platform structure is:
+                    </p>
+
+
+                    <div class="payment-box">
+
+                        <div>
+
+                            <strong>
+                                15%
+                            </strong>
+
+                            <span>
+                                VORVENA
+                            </span>
+
+                        </div>
+
+
+                        <div class="plus">
+                            +
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                85%
+                            </strong>
+
+                            <span>
+                                PROFESSIONAL
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <p>
+                        VORVENA retains 15% for its platform and
+                        administrative role, while 85% goes to the
+                        professional completing the approved project.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= GLOBAL ================= -->
+
+        <section class="global-section">
+
+            <div class="global-content">
+
+                <span>
+                    05 / GLOBAL TALENT
+                </span>
 
                 <h2>
-                    PROFESSIONAL INFORMATION.
-                    <span>NOT PRIVATE DATA.</span>
+                    TALENT HAS
+                    <span>NO BORDER.</span>
                 </h2>
 
-            </div>
+                <p>
+                    Discover professionals from Nigeria and other
+                    countries around the world.
+                </p>
 
-            <p>
-                Public profiles only display information
-                approved for professional viewing. Private
-                information such as email addresses, phone
-                numbers, passwords, CV files and administrator
-                notes are not displayed here.
-            </p>
+            </div>
 
         </section>
 
 
-        <!-- CTA -->
 
-        <section class="profiles-cta">
+        <!-- ================= CTA ================= -->
 
-            <p>
-                ARE YOU A SKILLED PROFESSIONAL?
-            </p>
+        <section class="final-cta">
+
+            <span class="section-label">
+                06 / JOIN VORVENA
+            </span>
+
 
             <h2>
-                GET YOUR
-                <span>PROFILE</span>
-                ON VORVENA.
+                YOUR NEXT
+                <span>OPPORTUNITY IS HERE.</span>
             </h2>
 
-            <a href="join.html">
-                Join Community
-            </a>
+
+            <div class="cta-actions">
+
+                <a
+                    href="join.html"
+                    class="btn btn-dark"
+                >
+                    Join Community
+                    <span>↗</span>
+                </a>
+
+
+                <a
+                    href="clients.html"
+                    class="btn btn-light"
+                >
+                    I'm a Client
+                </a>
+
+            </div>
 
         </section>
 
     </main>
 
 
-    <!-- FOOTER -->
 
-    <footer class="footer">
+    <!-- ================= FOOTER ================= -->
 
-        <div class="footer-container">
+    <footer class="site-footer">
+
+        <div class="footer-top">
 
 
             <div class="footer-brand">
 
-                <h2>VORVENA</h2>
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+                    VORVENA
+                </a>
 
                 <p>
-                    Connecting skilled people with
-                    real opportunities.
+                    Talent. Trust. Opportunity.
                 </p>
 
             </div>
@@ -440,7 +764,9 @@
 
             <div class="footer-column">
 
-                <h3>Explore</h3>
+                <h4>
+                    EXPLORE
+                </h4>
 
                 <a href="index.html">
                     Home
@@ -463,14 +789,12 @@
 
             <div class="footer-column">
 
-                <h3>Join</h3>
+                <h4>
+                    JOIN
+                </h4>
 
                 <a href="join.html">
                     Join Community
-                </a>
-
-                <a href="login.html">
-                    Login
                 </a>
 
             </div>
@@ -478,7 +802,9 @@
 
             <div class="footer-column">
 
-                <h3>Legal</h3>
+                <h4>
+                    LEGAL
+                </h4>
 
                 <a href="terms.html">
                     Terms & Conditions
@@ -492,8 +818,8 @@
                     Community Guidelines
                 </a>
 
-                <a href="#" id="feedbackBtn">
-                    💬 Give Feedback
+                <a href="feedback.html">
+                    Feedback
                 </a>
 
             </div>
@@ -503,17 +829,18 @@
 
         <div class="footer-bottom">
 
-            <p>
-                © 2026 VORVENA. All rights reserved.
-            </p>
+            <span>
+                © 2026 VORVENA
+            </span>
 
-            <p>
+            <span>
                 Built for talent. Built for opportunity.
-            </p>
+            </span>
 
         </div>
 
     </footer>
+
 
 
     <script src="profiles.js"></script>

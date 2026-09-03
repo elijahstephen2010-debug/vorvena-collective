@@ -1,3 +1,5 @@
+/* ================= RESET ================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,363 +14,403 @@ body {
     background: #050505;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.7;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 
 /* ================= HEADER ================= */
 
 .header {
+    width: 100%;
     height: 80px;
-    padding: 0 7%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
     border-bottom: 1px solid #222;
 
     position: relative;
-    z-index: 1000;
+    z-index: 100;
+}
+
+.nav-wrapper {
+    width: min(1400px, 92%);
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-    color: #ffffff;
-
-    text-decoration: none;
-
-    font-size: 25px;
-    font-weight: 800;
-
+    font-size: 1.5rem;
+    font-weight: 900;
     letter-spacing: 3px;
 }
 
 .nav {
     display: flex;
-
+    align-items: center;
     gap: 30px;
 }
 
-.nav a {
-    color: #888;
+.nav-link {
+    position: relative;
 
-    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
 
-    font-size: 14px;
+    color: #aaa;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.nav a:hover {
-    color: #ffffff;
+.nav-link:hover {
+    color: #fff;
 }
 
+.nav-link.active {
+    color: #fff;
+    font-weight: 800;
+}
 
-/* ================= MENU ================= */
+.nav-link.active::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 100%;
+    height: 2px;
+
+    background: #fff;
+}
+
+.join-link {
+    border: 1px solid #fff;
+    padding: 10px 16px;
+}
+
+.join-link:hover {
+    background: #fff;
+    color: #000;
+}
 
 .menu-btn {
     display: none;
 
+    width: 42px;
+    height: 42px;
+
     background: transparent;
-
-    border: none;
-
-    color: #ffffff;
-
-    font-size: 28px;
+    border: 1px solid #444;
 
     cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    gap: 5px;
 }
 
-.mobile-nav {
-    display: none;
+.menu-btn span {
+    display: block;
+
+    width: 19px;
+    height: 2px;
+
+    background: #fff;
 }
 
 
 /* ================= HERO ================= */
 
 .terms-hero {
-    padding: 110px 7% 90px;
+    width: min(1200px, 90%);
+    margin: auto;
+
+    padding: 120px 0 100px;
 
     border-bottom: 1px solid #222;
 }
 
-.terms-hero > p:first-child {
-    color: #666;
+.hero-label {
+    margin-bottom: 30px;
 
-    font-size: 11px;
+    color: #777;
 
-    letter-spacing: 4px;
-
-    margin-bottom: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 3px;
 }
 
 .terms-hero h1 {
-    font-size: clamp(55px, 8vw, 105px);
+    max-width: 1050px;
 
-    line-height: 0.9;
+    font-size: clamp(3.8rem, 8vw, 7.5rem);
+    line-height: 0.88;
 
-    letter-spacing: -5px;
-
-    max-width: 1000px;
+    letter-spacing: -6px;
+    font-weight: 900;
 }
 
-.terms-hero h1 span {
-    color: #777;
-}
-
-.hero-text {
+.terms-hero p {
     max-width: 650px;
 
-    color: #888;
+    margin-top: 45px;
 
-    margin-top: 30px;
+    color: #aaa;
 
-    font-size: 16px;
+    font-size: 1.05rem;
 }
 
 .updated {
+    margin-top: 35px;
+
     color: #555;
 
-    font-size: 11px;
-
-    margin-top: 25px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
 
 /* ================= CONTENT ================= */
 
 .terms-content {
-    max-width: 1300px;
-
+    width: min(1200px, 90%);
     margin: auto;
 
-    padding: 100px 7%;
-
     display: grid;
+    grid-template-columns: 180px 1fr;
 
-    grid-template-columns: 230px 1fr;
-
-    gap: 90px;
+    padding: 100px 0;
 }
-
-
-/* ================= SIDEBAR ================= */
 
 .terms-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
     position: sticky;
+    top: 100px;
 
-    top: 30px;
-
-    align-self: start;
+    height: fit-content;
 }
 
-.terms-sidebar > p {
+.terms-sidebar span {
     color: #555;
 
-    font-size: 10px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
 }
-
-.terms-sidebar a {
-    display: block;
-
-    color: #666;
-
-    text-decoration: none;
-
-    font-size: 12px;
-
-    padding: 8px 0;
-
-    transition: 0.3s;
-}
-
-.terms-sidebar a:hover {
-    color: #ffffff;
-}
-
-
-/* ================= ARTICLE ================= */
 
 .terms-article {
-    max-width: 760px;
+    max-width: 800px;
 }
 
-.terms-article section {
-    padding-bottom: 70px;
 
-    margin-bottom: 70px;
+/* ================= TERMS SECTIONS ================= */
 
-    border-bottom: 1px solid #202020;
+.terms-section {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+
+    gap: 30px;
+
+    padding: 60px 0;
+
+    border-bottom: 1px solid #222;
 }
 
-.number {
-    color: #666;
+.section-number {
+    color: #555;
 
-    font-size: 11px;
-
-    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 800;
 }
 
-.terms-article h2 {
-    font-size: 35px;
+.terms-section h2 {
+    margin-bottom: 25px;
 
-    line-height: 1.1;
-
-    margin: 15px 0 25px;
+    font-size: 2rem;
+    line-height: 1;
 
     letter-spacing: -1px;
 }
 
-.terms-article p {
-    color: #888;
-
-    font-size: 14px;
-
+.terms-section p {
     margin-bottom: 18px;
+
+    color: #aaa;
+
+    font-size: 1rem;
+}
+
+.terms-section p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ================= LIST ================= */
+
+.terms-section ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.terms-section li {
+    margin-bottom: 14px;
+
+    color: #aaa;
+
+    font-size: 0.95rem;
+}
+
+.terms-section li::marker {
+    color: #555;
 }
 
 
 /* ================= PAYMENT ================= */
 
 .payment-box {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    border: 1px solid #292929;
-
     margin: 35px 0;
 
-    background: #080808;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
 }
 
-.payment-box div {
-    padding: 35px;
+.payment-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
 
-    display: flex;
+    gap: 30px;
 
-    flex-direction: column;
+    padding: 30px 0;
 
-    border-right: 1px solid #292929;
+    border-bottom: 1px solid #222;
 }
 
-.payment-box div:last-child {
-    border-right: none;
+.payment-item:last-child {
+    border-bottom: none;
 }
 
-.payment-box strong {
-    font-size: 55px;
-
+.payment-item strong {
+    font-size: 3rem;
     line-height: 1;
+
+    letter-spacing: -2px;
 }
 
-.payment-box span {
-    color: #666;
+.payment-item span {
+    align-self: center;
 
-    font-size: 11px;
+    color: #888;
 
-    letter-spacing: 2px;
-
-    margin-top: 10px;
+    font-size: 0.9rem;
 }
 
 
 /* ================= FINAL ================= */
 
-.final-section {
-    border: 1px solid #292929 !important;
-
-    padding: 40px !important;
-
-    margin-bottom: 0 !important;
+.terms-final {
+    padding: 110px 0 40px;
 }
 
-.final-section h2 {
-    margin-top: 0;
+.terms-final span {
+    display: block;
+
+    margin-bottom: 30px;
+
+    color: #777;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.terms-final h2 {
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+}
+
+.terms-final p {
+    max-width: 550px;
+
+    margin-top: 35px;
+
+    color: #777;
 }
 
 
 /* ================= FOOTER ================= */
 
 .footer {
-    background: #030303;
+    width: min(1400px, 92%);
+    margin: auto;
+
+    padding: 80px 0 50px;
 
     border-top: 1px solid #222;
 
-    padding: 70px 7% 25px;
-}
-
-.footer-container {
     display: grid;
-
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
 
-    gap: 40px;
+    gap: 50px;
 }
 
 .footer-brand h2 {
-    letter-spacing: 4px;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
 }
 
 .footer-brand p {
+    max-width: 320px;
+
+    margin-top: 20px;
+
     color: #777;
 
-    max-width: 250px;
-
-    margin-top: 15px;
+    font-size: 0.9rem;
 }
 
 .footer-column {
     display: flex;
-
     flex-direction: column;
-
-    gap: 10px;
+    gap: 12px;
 }
 
 .footer-column h3 {
-    font-size: 14px;
-
     margin-bottom: 10px;
+
+    color: #666;
+
+    font-size: 0.7rem;
+    letter-spacing: 2px;
 }
 
 .footer-column a {
-    color: #777;
+    color: #aaa;
 
-    text-decoration: none;
+    font-size: 0.85rem;
 
-    font-size: 13px;
-
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .footer-column a:hover {
-    color: #ffffff;
+    color: #fff;
 }
 
-.footer-bottom {
-    border-top: 1px solid #1d1d1d;
-
-    margin-top: 60px;
-
-    padding-top: 20px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 20px;
-}
-
-.footer-bottom p {
-    color: #555;
-
-    font-size: 12px;
+.feedback-link {
+    margin-top: 18px;
 }
 
 
@@ -378,67 +420,53 @@ body {
 
     .header {
         height: 70px;
-
-        padding: 0 5%;
     }
 
     .nav {
         display: none;
-    }
 
-    .menu-btn {
-        display: block;
-    }
-
-    .mobile-nav {
         position: absolute;
 
         top: 70px;
-
         left: 0;
 
         width: 100%;
+
+        padding: 25px 5%;
 
         background: #050505;
 
         border-bottom: 1px solid #222;
 
-        display: none;
-
         flex-direction: column;
+        align-items: flex-start;
 
-        z-index: 999;
+        gap: 20px;
     }
 
-    .mobile-nav.show {
+    .nav.open {
         display: flex;
     }
 
-    .mobile-nav a {
-        padding: 17px 5%;
-
-        color: #888;
-
-        text-decoration: none;
-
-        border-bottom: 1px solid #1c1c1c;
+    .menu-btn {
+        display: flex;
     }
 
     .terms-hero {
-        padding: 80px 5%;
+        padding: 90px 0 70px;
+    }
+
+    .terms-hero h1 {
+        letter-spacing: -4px;
     }
 
     .terms-content {
-        padding: 80px 5%;
-
         grid-template-columns: 1fr;
 
-        gap: 50px;
+        padding: 70px 0;
     }
 
     .terms-sidebar {
-        position: static;
-
         display: none;
     }
 
@@ -446,16 +474,12 @@ body {
         max-width: 100%;
     }
 
+    .terms-section {
+        grid-template-columns: 50px 1fr;
+    }
+
     .footer {
-        padding: 60px 5% 25px;
-    }
-
-    .footer-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .footer-bottom {
-        flex-direction: column;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -464,34 +488,76 @@ body {
 
 @media (max-width: 425px) {
 
+    .nav-wrapper {
+        width: 90%;
+    }
+
     .logo {
-        font-size: 21px;
+        font-size: 1.25rem;
+        letter-spacing: 2px;
+    }
+
+    .terms-hero {
+        width: 90%;
+
+        padding: 75px 0 60px;
     }
 
     .terms-hero h1 {
-        font-size: 47px;
+        font-size: 3.1rem;
+        letter-spacing: -2.5px;
+    }
 
+    .terms-hero p {
+        font-size: 0.92rem;
+    }
+
+    .terms-content {
+        width: 90%;
+
+        padding: 50px 0;
+    }
+
+    .terms-section {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 45px 0;
+    }
+
+    .terms-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .terms-section p,
+    .terms-section li {
+        font-size: 0.92rem;
+    }
+
+    .payment-item {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .payment-item strong {
+        font-size: 2.5rem;
+    }
+
+    .terms-final h2 {
+        font-size: 3.1rem;
         letter-spacing: -2px;
     }
 
-    .terms-article h2 {
-        font-size: 28px;
-    }
+    .footer {
+        width: 90%;
 
-    .terms-article p {
-        font-size: 13px;
-    }
-
-    .payment-box strong {
-        font-size: 40px;
-    }
-
-    .payment-box div {
-        padding: 25px;
-    }
-
-    .footer-container {
         grid-template-columns: 1fr;
+
+        padding: 60px 0 40px;
+
+        gap: 40px;
     }
 }
 
@@ -501,11 +567,18 @@ body {
 @media (max-width: 375px) {
 
     .terms-hero h1 {
-        font-size: 41px;
+        font-size: 2.7rem;
     }
 
-    .final-section {
-        padding: 25px !important;
+    .terms-section h2 {
+        font-size: 1.5rem;
     }
 
+    .terms-final h2 {
+        font-size: 2.7rem;
+    }
+
+    .payment-item strong {
+        font-size: 2.2rem;
+    }
 }

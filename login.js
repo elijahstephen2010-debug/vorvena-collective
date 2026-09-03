@@ -1,104 +1,233 @@
-const menuBtn = document.getElementById("menuBtn");
-const mobileNav = document.getElementById("mobileNav");
+document.addEventListener("DOMContentLoaded", () => {
+
+    const loginForm = document.getElementById("loginForm");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+
+    const togglePassword =
+        document.getElementById("togglePassword");
+
+    const rememberCheckbox =
+        document.getElementById("remember");
+
+    const forgotPassword =
+        document.getElementById("forgotPassword");
+
+    const formMessage =
+        document.getElementById("formMessage");
 
 
-/* ================= MOBILE MENU ================= */
+    // =========================
+    // SHOW / HIDE PASSWORD
+    // =========================
 
-menuBtn.addEventListener("click", () => {
+    if (togglePassword && passwordInput) {
 
-    mobileNav.classList.toggle("show");
+        togglePassword.addEventListener("click", () => {
 
-});
+            const isPassword =
+                passwordInput.type === "password";
 
+            passwordInput.type =
+                isPassword ? "text" : "password";
 
-const mobileLinks =
-    mobileNav.querySelectorAll("a");
+            togglePassword.textContent =
+                isPassword ? "HIDE" : "SHOW";
 
-
-mobileLinks.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        mobileNav.classList.remove("show");
-
-    });
-
-});
-
-
-/* ================= PASSWORD VISIBILITY ================= */
-
-const password =
-    document.getElementById("password");
-
-const togglePassword =
-    document.getElementById("togglePassword");
-
-
-togglePassword.addEventListener("click", () => {
-
-    if (password.type === "password") {
-
-        password.type = "text";
-
-        togglePassword.textContent = "Hide";
-
-    } else {
-
-        password.type = "password";
-
-        togglePassword.textContent = "Show";
+        });
 
     }
 
-});
+
+    // =========================
+    // REMEMBER EMAIL
+    // =========================
+
+    const savedEmail =
+        localStorage.getItem("vorvenaRememberedEmail");
+
+    if (savedEmail && emailInput) {
+
+        emailInput.value = savedEmail;
+
+        if (rememberCheckbox) {
+            rememberCheckbox.checked = true;
+        }
+
+    }
 
 
-/* ================= LOGIN ================= */
+    // =========================
+    // LOGIN
+    // =========================
 
-const loginForm =
-    document.getElementById("loginForm");
+    if (loginForm) {
 
-const loginMessage =
-    document.getElementById("loginMessage");
+        loginForm.addEventListener("submit", (event) => {
 
+            event.preventDefault();
 
-loginForm.addEventListener("submit", event => {
+            clearMessage();
 
-    event.preventDefault();
+            const email =
+                emailInput.value.trim();
 
-    loginMessage.textContent =
-        "Login system will connect to the VORVENA backend.";
-
-});
-
-
-/* ================= FORGOT PASSWORD ================= */
-
-const forgotPassword =
-    document.getElementById("forgotPassword");
+            const password =
+                passwordInput.value.trim();
 
 
-forgotPassword.addEventListener("click", event => {
+            // =========================
+            // EMPTY CHECK
+            // =========================
 
-    event.preventDefault();
+            if (!email || !password) {
 
-    loginMessage.textContent =
-        "Password recovery will be connected to the backend.";
+                showMessage(
+                    "Please enter your email and password.",
+                    "error"
+                );
 
-});
-
-
-/* ================= FEEDBACK ================= */
-
-const feedbackBtn =
-    document.getElementById("feedbackBtn");
+                return;
+            }
 
 
-feedbackBtn.addEventListener("click", event => {
+            // =========================
+            // EMAIL CHECK
+            // =========================
 
-    event.preventDefault();
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    alert("Feedback system coming soon.");
+            if (!emailPattern.test(email)) {
+
+                showMessage(
+                    "Please enter a valid email address.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+            // =========================
+            // PASSWORD CHECK
+            // =========================
+
+            if (password.length < 8) {
+
+                showMessage(
+                    "Password must be at least 8 characters.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+            // =========================
+            // REMEMBER EMAIL
+            // =========================
+
+            if (
+                rememberCheckbox &&
+                rememberCheckbox.checked
+            ) {
+
+                localStorage.setItem(
+                    "vorvenaRememberedEmail",
+                    email
+                );
+
+            } else {
+
+                localStorage.removeItem(
+                    "vorvenaRememberedEmail"
+                );
+
+            }
+
+
+            // =========================
+            // TEMPORARY LOGIN
+            // =========================
+
+            showMessage(
+                "Login form is working. Authentication will be connected to the VORVENA backend later.",
+                "success"
+            );
+
+
+            /*
+            ==========================================
+            SUPABASE AUTHENTICATION — LATER
+            ==========================================
+
+            const { data, error } =
+                await supabase.auth.signInWithPassword({
+                    email: email,
+                    password: password
+                });
+
+            if (error) {
+                showMessage(error.message, "error");
+                return;
+            }
+
+            window.location.href = "dashboard.html";
+
+            ==========================================
+            */
+
+        });
+
+    }
+
+
+    // =========================
+    // FORGOT PASSWORD
+    // =========================
+
+    if (forgotPassword) {
+
+        forgotPassword.addEventListener("click", (event) => {
+
+            event.preventDefault();
+
+            showMessage(
+                "Password recovery will be connected when authentication is added.",
+                "success"
+            );
+
+        });
+
+    }
+
+
+    // =========================
+    // MESSAGE
+    // =========================
+
+    function showMessage(message, type) {
+
+        if (!formMessage) return;
+
+        formMessage.textContent = message;
+
+        formMessage.className =
+            `form-message ${type}`;
+
+    }
+
+
+    function clearMessage() {
+
+        if (!formMessage) return;
+
+        formMessage.textContent = "";
+
+        formMessage.className =
+            "form-message";
+
+    }
 
 });

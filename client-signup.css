@@ -1,0 +1,626 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f3;
+    color: #111;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.signup-header {
+    width: 100%;
+    min-height: 85px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #d8d8d5;
+    background: #f5f5f3;
+}
+
+.logo {
+    font-size: 1.45rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.back-link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: opacity 0.3s ease;
+}
+
+.back-link:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+.signup-page {
+    width: 88%;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: calc(100vh - 85px);
+
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 90px;
+
+    padding: 90px 0;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.signup-intro {
+    padding-top: 30px;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 30px;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.signup-intro h1 {
+    font-size: clamp(3rem, 6vw, 6.5rem);
+    line-height: 0.92;
+    letter-spacing: -5px;
+    font-weight: 900;
+    max-width: 750px;
+    margin-bottom: 35px;
+}
+
+.signup-intro > p {
+    max-width: 520px;
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 60px;
+}
+
+
+/* =========================
+   INTRO POINTS
+========================= */
+
+.intro-points {
+    max-width: 560px;
+    border-top: 1px solid #cfcfcb;
+}
+
+.intro-point {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+
+    padding: 22px 0;
+    border-bottom: 1px solid #cfcfcb;
+}
+
+.intro-point span {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.intro-point p {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+
+/* =========================
+   SIGNUP CARD
+========================= */
+
+.signup-card {
+    background: #111;
+    color: #fff;
+    padding: 55px;
+
+    align-self: start;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+    margin-bottom: 40px;
+}
+
+.card-number {
+    display: block;
+    margin-bottom: 18px;
+
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.card-header h2 {
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+.card-header p {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.form-group label span {
+    color: #777;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.form-group input {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 16px;
+
+    border: 1px solid #333;
+    outline: none;
+
+    background: #191919;
+    color: #fff;
+
+    font-size: 0.92rem;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: #666;
+}
+
+.form-group input:focus {
+    border-color: #fff;
+    background: #202020;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 8px;
+
+    color: #777;
+    font-size: 0.7rem;
+}
+
+
+/* =========================
+   PASSWORD
+========================= */
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 75px;
+}
+
+.show-password {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent;
+
+    color: #aaa;
+    cursor: pointer;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.show-password:hover {
+    color: #fff;
+}
+
+
+/* =========================
+   AGREEMENT
+========================= */
+
+.agreement {
+    margin-top: 32px;
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    font-size: 0.78rem;
+    color: #999;
+
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    width: 15px;
+    height: 15px;
+
+    margin-top: 3px;
+
+    accent-color: #fff;
+    cursor: pointer;
+}
+
+.checkbox-label a {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+
+/* =========================
+   FORM MESSAGE
+========================= */
+
+.form-message {
+    min-height: 20px;
+    margin-bottom: 15px;
+
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+.form-message.error {
+    color: #ff8b8b;
+}
+
+.form-message.success {
+    color: #9cffb0;
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.submit-btn {
+    width: 100%;
+    min-height: 58px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: none;
+    background: #fff;
+    color: #111;
+
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #ddd;
+    transform: translateY(-2px);
+}
+
+.submit-btn .arrow {
+    font-size: 1.3rem;
+}
+
+
+/* =========================
+   LOGIN PROMPT
+========================= */
+
+.login-prompt {
+    margin-top: 30px;
+    padding-top: 25px;
+
+    border-top: 1px solid #333;
+
+    text-align: center;
+}
+
+.login-prompt p {
+    color: #777;
+    font-size: 0.8rem;
+}
+
+.login-prompt a {
+    color: #fff;
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.signup-footer {
+    width: 88%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    padding: 50px 0 35px;
+
+    border-top: 1px solid #d0d0cd;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: end;
+    gap: 30px;
+}
+
+.footer-logo {
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
+
+.footer-left p {
+    margin-top: 8px;
+
+    color: #777;
+    font-size: 0.76rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    font-size: 0.72rem;
+    font-weight: 700;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.5;
+}
+
+.copyright {
+    justify-self: end;
+
+    color: #888;
+    font-size: 0.7rem;
+}
+
+
+/* =========================
+   TABLET
+   768px
+========================= */
+
+@media (max-width: 768px) {
+
+    .signup-header {
+        min-height: 75px;
+        padding: 0 6%;
+    }
+
+    .signup-page {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+        gap: 55px;
+
+        padding: 60px 0;
+    }
+
+    .signup-intro {
+        padding-top: 0;
+    }
+
+    .signup-intro h1 {
+        font-size: clamp(3rem, 10vw, 5rem);
+        letter-spacing: -3px;
+    }
+
+    .signup-intro > p {
+        margin-bottom: 40px;
+    }
+
+    .signup-card {
+        padding: 40px;
+    }
+
+    .signup-footer {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+        align-items: start;
+
+        padding: 40px 0 30px;
+    }
+
+    .footer-links {
+        order: 2;
+    }
+
+    .copyright {
+        justify-self: start;
+        order: 3;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   425px
+========================= */
+
+@media (max-width: 425px) {
+
+    .signup-header {
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .back-link {
+        font-size: 0.72rem;
+    }
+
+    .signup-page {
+        width: 90%;
+        padding: 45px 0;
+        gap: 40px;
+    }
+
+    .eyebrow {
+        margin-bottom: 20px;
+    }
+
+    .signup-intro h1 {
+        font-size: 3rem;
+        letter-spacing: -2.5px;
+        line-height: 0.95;
+    }
+
+    .signup-intro > p {
+        font-size: 0.92rem;
+        line-height: 1.7;
+    }
+
+    .intro-point {
+        grid-template-columns: 45px 1fr;
+        gap: 12px;
+    }
+
+    .intro-point p {
+        font-size: 0.85rem;
+    }
+
+    .signup-card {
+        padding: 30px 22px;
+    }
+
+    .card-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .form-group input {
+        height: 50px;
+    }
+
+    .submit-btn {
+        min-height: 55px;
+        font-size: 0.7rem;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   375px
+========================= */
+
+@media (max-width: 375px) {
+
+    .signup-page {
+        width: 92%;
+        padding: 35px 0;
+    }
+
+    .signup-intro h1 {
+        font-size: 2.55rem;
+    }
+
+    .signup-card {
+        padding: 25px 18px;
+    }
+
+    .card-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .form-group input {
+        font-size: 0.85rem;
+    }
+
+    .checkbox-label {
+        font-size: 0.72rem;
+    }
+
+    .signup-footer {
+        width: 92%;
+    }
+}
